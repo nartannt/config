@@ -6,6 +6,12 @@
 }:
 
 {
+  imports = [
+    ./users.nix
+    ./locale.nix
+    ./programs.nix
+  ];
+
   nix = {
     settings = {
       experimental-features = [
@@ -15,7 +21,7 @@
       auto-optimise-store = true;
     };
 
-    package = pkgs.nixVersion.latest;
+    package = pkgs.nixVersions.latest;
   };
 
   boot.tmp = {

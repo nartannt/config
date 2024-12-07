@@ -27,7 +27,6 @@
   networking.hostName = "tulkas"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -61,7 +60,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
 
   hardware.graphics = {
     enable = true;
@@ -325,6 +323,6 @@
     };
   };
 
- system.stateVersion = "22.05"; # Did you read the comment?
+  system.stateVersion = "22.05"; # Did you read the comment?
 
 }
