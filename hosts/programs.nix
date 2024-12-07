@@ -16,6 +16,11 @@
     enableExtraSocket = true;
   };
 
+  programs.bash.shellAliases = {
+    vim = "nvim";
+    open = "xdg-open";
+  };
+
   environment.systemPackages = with pkgs; [
     bat
     file
