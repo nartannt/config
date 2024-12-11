@@ -28,6 +28,8 @@
       );
     in
 
+
+
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
@@ -48,8 +50,13 @@
               inherit inputs;
             };
           };
+        nix = {
+          registry.ocaml.flake = "./devshells/ocaml.nix";
         };
+        };
+        
       };
+
 
       perSystem =
         {
@@ -64,4 +71,6 @@
           );
         };
     };
+
 }
+    
