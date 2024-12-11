@@ -2,7 +2,7 @@
 
 with pkgs;
 with ocamlPackages;
-mkDevShell pkgs "OCaml" [
+mkDevShell pkgs "ocaml" [
   findlib
   dune_3
   ocaml
