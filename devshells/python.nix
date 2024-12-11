@@ -1,16 +1,22 @@
-# Standard python env. Please include your own in a project's flake.
-# Couldn't get pylint to work. Is pylsp even reading the settings declared in
-# vimrc?
-{ python3, mkShell }:
+{ mkDevShell, pkgs }:
 
-let
-  python-env = p: with p;
-    [ matplotlib mypy notebook numpy pandas python-lsp-server ] # could also include sympy, scipy...
-    ++ python-lsp-server.optional-dependencies.yapf
-    ++ python-lsp-server.optional-dependencies.pyflakes;
-in
+with pkgs;
+mkDevShell pkgs "python" [
+  (python312.withPackages (
+    ps: with ps; [
+      beautifulsoup4
+      black
+      matplotlib
+      numpy
+      python-dotenv
+      python-lsp-ruff
+      requests
+      scikit-learn
+      setuptools
+      urllib3
+      virtualenv
+    ]
+  ))
+  ruff-lsp
+]
 
-mkShell {
-  name = "python";
-  packages = [ (python3.withPackages python-env) ];
-}

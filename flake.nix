@@ -51,7 +51,9 @@
             };
           };
         nix = {
-          registry.ocaml.flake = "./devshells/ocaml.nix";
+          registry = lib.incence.mapModulesNoDefault ./devshells (
+            p : {registry.p.flake = p.path;}
+          );
         };
         };
         
