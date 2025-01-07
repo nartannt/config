@@ -57,7 +57,7 @@
   hardware.enableAllFirmware = true;
   # Enable sound with pipewire.
   #sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -121,6 +121,8 @@
         "networkmanager"
       ];
       packages = with pkgs; [
+        # email
+        hydroxide
         # utils
         lshw
         #graphviz
@@ -214,6 +216,7 @@
         file
         patchelf
         pdftk
+        xournalpp
         planify
         geeqie
         magic-wormhole
