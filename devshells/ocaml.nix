@@ -8,6 +8,7 @@ mkDevShell pkgs "ocaml" [
   ocaml
   ocaml-lsp
   ocamlformat
+  ppx_inline_test
   utop
   containers
   containers-data

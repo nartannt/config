@@ -44,17 +44,14 @@
               ./hosts/tulkas
 
               home-manager.nixosModules.home-manager
+              ( {nix.registry.conf.flake = self; })
             ];
 
             specialArgs = {
               inherit inputs;
             };
           };
-        nix = {
-          registry = lib.incence.mapModulesNoDefault ./devshells (
-            p : {registry.p.flake = p.path;}
-          );
-        };
+        
         };
         
       };
