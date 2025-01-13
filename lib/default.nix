@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, inputs, ... }:
 
 let
   inherit (lib) makeExtensible attrValues foldr;
@@ -12,6 +12,6 @@ let
     };
   };
 
-  skavenLib = makeExtensible (self: mapModules ./. (file: import file { inherit self lib; }));
+  skavenLib = makeExtensible (self: mapModules ./. (file: import file { inherit self lib inputs; }));
 in
 skavenLib.extend (self: super: foldr (a: b: a // b) { } (attrValues super))

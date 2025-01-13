@@ -13,6 +13,7 @@
   ];
 
   nix = {
+    registry.conf.flake = inputs.self;
     settings = {
       experimental-features = [
         "nix-command"
@@ -23,6 +24,9 @@
 
     package = pkgs.nixVersions.latest;
   };
+# Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
 
   boot.tmp = {
     useTmpfs = true;

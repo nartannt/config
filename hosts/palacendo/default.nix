@@ -18,16 +18,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
-
-  # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
-
-  # Enable swap on luks
-  boot.initrd.luks.devices."luks-bb52ebe0-a875-4a78-831d-1d2cead2faa6".device = "/dev/disk/by-uuid/bb52ebe0-a875-4a78-831d-1d2cead2faa6";
-  boot.initrd.luks.devices."luks-bb52ebe0-a875-4a78-831d-1d2cead2faa6".keyFile = "/crypto_keyfile.bin";
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -47,7 +37,7 @@
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "fr";
-    variant = "";
+    variant = "azerty";
   };
 
   # Enable CUPS to print documents.
@@ -112,7 +102,27 @@
     spleen
   ];
 
-    # List packages installed in system profile. To search, run:
+  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # programs and applications
+  users.users = {
+    nartan = {
+      extraGroups = [
+        "networkmanager"
+      ];
+      packages = with pkgs; [
+	# programs (not here)
+      ];
+    };
+  };
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     gcc
@@ -173,6 +183,6 @@
     };
   };
 
-  system.stateVersion = "22.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }
