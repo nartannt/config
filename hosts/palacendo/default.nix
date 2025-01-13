@@ -184,5 +184,6 @@
   };
 
   system.stateVersion = "24.11"; # Did you read the comment?
+  home-manager.users.nartan.home.stateVersion = "24.11";
 
 }

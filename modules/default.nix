@@ -11,6 +11,7 @@
     ./locale.nix
     ./programs.nix
     ./starship.nix
+    ./nvim/default.nix
   ];
 
   nix = {

@@ -12,13 +12,6 @@
 {
   services.openssh.enable = true;
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    vimAlias = true;
-    viAlias = true;
-  };
-
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
@@ -26,7 +19,6 @@
   };
 
   programs.bash.shellAliases = {
-    vim = "nvim";
     open = "xdg-open";
   };
 
@@ -73,6 +65,7 @@
         ocaml # opam
         ocamlPackages.lsp
         ocamlPackages.merlin
+        nixpkgs-fmt
         # Python
 	python-with-my-packages
         # general tools
@@ -110,7 +103,6 @@
         neovim
         python310Packages.pynvim
         # shell
-        starship
         gnomeExtensions.pano
         libgda
         gsound
