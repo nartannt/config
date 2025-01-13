@@ -10,6 +10,7 @@
     ./users.nix
     ./locale.nix
     ./programs.nix
+    ./starship.nix
   ];
 
   nix = {
