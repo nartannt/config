@@ -26,7 +26,7 @@ require("conform").setup({
     rust = { "rustfmt", lsp_format = "fallback" },
     -- TODO find out which format and options to use
     ocaml = { "ocamlformat" },
-    nix = { "nixpkgs-fmt" },
+    nix = { "nixfmt" },
     
   },
 })

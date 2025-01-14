@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 let 
   extraConfig = builtins.readFile ./init.vim;
@@ -11,6 +11,9 @@ home-manager.users.nartan.programs.neovim = {
     vimAlias = true;
     viAlias = true;
     defaultEditor = true;
+    extraPackages = with pkgs; [
+      nixfmt-classic
+    ];
     inherit extraConfig extraLuaConfig;
 };
 }

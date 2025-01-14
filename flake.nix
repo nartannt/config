@@ -10,23 +10,20 @@
 
   outputs = inputs@{ nixpkgs, ... }:
     let
-	pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      lib = nixpkgs.lib.extend (
-        final: prev: {
-          incense = import ./lib {
-            lib = final;
-            inherit inputs;
-          };
-        }
-      );
-    in
+      pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      lib = nixpkgs.lib.extend (final: prev: {
+        incense = import ./lib {
+          lib = final;
+          inherit inputs;
+        };
+      });
 
-{
-nixosConfigurations = lib.genAttrs [ "tulkas" "palacendo" ] lib.incense.hostNixosConfig;
-devShells."x86_64-linux" = lib.incense.mapModulesNoDefault ./devshells (
-            p: pkgs.callPackage p { inherit (lib.incense) mkDevShell; }
-          );
- 
-};
+    in {
+      nixosConfigurations =
+        lib.genAttrs [ "tulkas" "palacendo" ] lib.incense.hostNixosConfig;
+      devShells."x86_64-linux" = lib.incense.mapModulesNoDefault ./devshells
+        (p: pkgs.callPackage p { inherit (lib.incense) mkDevShell; });
+
+    };
 }
 
