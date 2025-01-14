@@ -9,11 +9,6 @@
   imports = [
     ./hardware-configuration.nix
   ];
-  programs.bash.shellAliases = {
-    vim = "nvim";
-    open = "xdg-open";
-    pwease = "sudo";
-  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

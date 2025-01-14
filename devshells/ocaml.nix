@@ -15,6 +15,5 @@ mkDevShell pkgs "ocaml" [
   iter
   menhirLib
   fileutils
+  merlin
 ]
-
-

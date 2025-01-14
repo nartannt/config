@@ -3,6 +3,7 @@
 let
   my-python-packages = p: with p; [ pandas nltk numpy matplotlib ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
+
 in {
   services.openssh.enable = true;
 
@@ -49,12 +50,7 @@ in {
     lshw
     #graphviz
 
-    # programming
-    # general
-    #linuxKernel.packages.linux_zen.perf
-    #flamegraph
-    #Prolog
-    #swiProlog
+    #programming
     coq
     coqPackages.autosubst
     coqPackages.equations
@@ -69,10 +65,12 @@ in {
     rustup
     rust-analyzer
     # OCaml
-    ocaml # opam
+    ocaml
     ocamlPackages.lsp
     ocamlPackages.merlin
+
     nixfmt-classic
+
     # Python
     python-with-my-packages
     # general tools
