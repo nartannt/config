@@ -18,8 +18,21 @@
     enableExtraSocket = true;
   };
 
-  programs.bash.shellAliases = {
-    open = "xdg-open";
+  home-manager.users.nartan.programs.bash = {
+    enable = true;
+    shellAliases = {
+      open = "xdg-open";
+      cp = "cp -i";
+      mv = "mv -i";
+    };
+  };
+  
+  programs.bash = {
+    shellAliases = {
+      open = "xdg-open";
+      cp = "cp -i";
+      mv = "mv -i";
+    };
   };
 
   environment.systemPackages = with pkgs; [
