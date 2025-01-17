@@ -91,6 +91,12 @@ au BufRead,BufNewFile *.why,*.mlw set filetype=why3
 " ex: C-v then I then C-c or esc give different results
 inoremap <C-c> <esc>
 
+" I want to insert an empty line below / above without inserting
+let @b = 'ok'
+nnoremap <C-j> @b
+let @a = 'Oj'
+nnoremap <C-k> @a
+
 " format code
 autocmd FileType ocaml nnoremap <C-f> :Format<CR>hh
 autocmd FileType nix nnoremap <C-f> :Format<CR>hh

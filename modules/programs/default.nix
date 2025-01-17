@@ -1,10 +1,13 @@
 { pkgs, ... }:
 
 let
-  my-python-packages = p: with p; [ pandas nltk numpy matplotlib ];
-  python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 
 in {
+  
+  imports = [
+    ./programming.nix
+  ];
+
   services.openssh.enable = true;
 
   programs.gnupg.agent = {
@@ -42,39 +45,21 @@ in {
     unzip
     zip
     wget
+    tree
+    findutils
+    patchelf
 
     # TODO sort programs
     # email
-    hydroxide
     # utils
     lshw
     #graphviz
 
     #programming
-    coq
-    coqPackages.autosubst
-    coqPackages.equations
-    # C
-    gcc
-    cmake
-    clang-tools
-    #libcxx
-    #glibc.static
-    # Rust
-    rustc
-    rustup
-    rust-analyzer
-    # OCaml
-    ocaml
-    ocamlPackages.lsp
-    ocamlPackages.merlin
-
     nixfmt-classic
 
     # Python
-    python-with-my-packages
     # general tools
-    gnumake
     # media
     fragments
     # music
@@ -97,60 +82,60 @@ in {
     lutris
     wine
     wine-staging
+    steam
+    flatpak
 
     alass
-    zip
     zola
-    unzip
     wget
     firefox-wayland
+
     vim
     neovim
     python310Packages.pynvim
+
     # shell
     gnomeExtensions.pano
     libgda
     gsound
     #gensio
     zoom-us
-    tree
-    steam
-    flatpak
+
+
     rPackages.proton
+    hydroxide
+
     pkgs.gnome.gvfs
-    htop
-    file
-    patchelf
+
+
     pdftk
     xournalpp
+
     planify
+
     geeqie
+
     magic-wormhole
+    wormhole-rs
     croc
     #minecraft
     zotero
     tagger
-    # open source launcher for epic games games
-    heroic-unwrapped
-    wormhole-rs
-    #audacity
-    #shotcut
-    #kdenlive
-    #shotwell
+
     inkscape
     prismlauncher
-    inetutils
+
     thunderbird
-    evolution
 
     trilium-desktop
     # proton
     protonvpn-cli_2
     #gromacs
     wl-clipboard
+
     syncthing
+
     openvpn
-    git
     gitlab-runner
     # security
     gnupg
@@ -164,10 +149,6 @@ in {
     # packages i need but don't really understand
     #nodejs less than 16 for copilot apparently
     libGL
-    bc
-    xorg.libX11
-    binutils
     #binutilsNoLibc
-    findutils
   ];
 }
