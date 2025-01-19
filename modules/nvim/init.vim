@@ -11,9 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'ocaml/merlin'
     Plug 'stevearc/conform.nvim'
     Plug 'jbyuki/nabla.nvim'
-    "Plug 'github/copilot.vim'
     Plug 'tpope/vim-fugitive'
-    "Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'LnL7/vim-nix'
     Plug 'kaarmu/typst.vim'
     Plug 'sheerun/vim-polyglot'
@@ -154,4 +152,4 @@ autocmd FileType coq noremap <C-t> :CoqToLine<CR>hh  " undo last line
 digraph rt 8866
 digraph sc 8827
 
-lua require("config")
+"lua require("~/.config/nvim/config.lua")
