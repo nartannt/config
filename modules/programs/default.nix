@@ -3,10 +3,8 @@
 let
 
 in {
-  
-  imports = [
-    ./programming.nix
-  ];
+
+  imports = [ ./programming.nix ];
 
   services.openssh.enable = true;
 
@@ -102,12 +100,10 @@ in {
     #gensio
     zoom-us
 
-
     rPackages.proton
     hydroxide
 
     pkgs.gnome.gvfs
-
 
     pdftk
     xournalpp

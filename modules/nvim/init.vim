@@ -95,9 +95,12 @@ nnoremap <C-j> @b
 let @a = 'Oj'
 nnoremap <C-k> @a
 
+" TODO make a list of code file types
 " format code
-autocmd FileType ocaml nnoremap <C-f> :Format<CR>hh
-autocmd FileType nix nnoremap <C-f> :Format<CR>hh
+autocmd FileType ocaml nix nnoremap <C-f> :Format<CR>hh
+autocmd ExitPre ocaml nix :Format
+"autocmd FileType nix nnoremap <C-f> :Format<CR>hh
+
 
 " comments a single line for ocaml file
 let @c = 'I(*A*)'
