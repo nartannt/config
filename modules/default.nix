@@ -7,6 +7,7 @@
     ./starship.nix
     ./nvim/default.nix
     ./programs/default.nix
+    ./gnome.nix
   ];
 
   nix = {
