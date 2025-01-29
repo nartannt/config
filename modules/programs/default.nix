@@ -130,6 +130,8 @@ in {
     #gromacs
     wl-clipboard
 
+    ghostty
+
     syncthing
 
     openvpn
