@@ -7,6 +7,8 @@ let
   rust_packages = with pkgs; [ rustc rustup rust-analyzer ];
   scala_packages = with pkgs; [ metals sbt scala scalafmt ];
 
+  git_packages = with pkgs; [git git-lfs];
+
   my-python-packages = p: with p; [ pandas nltk numpy matplotlib ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 
@@ -15,5 +17,5 @@ let
 in {
   environment.systemPackages = with pkgs;
     ocaml_packages ++ c_packages ++ coq_packages ++ rust_packages
-    ++ scala_packages ++ [ python-with-my-packages binutils gnumake ];
+    ++ scala_packages ++ git_packages ++ [ python-with-my-packages binutils gnumake ];
 }

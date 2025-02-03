@@ -23,12 +23,13 @@ in {
     };
   };
 
-  programs.bash = {
-    shellAliases = {
-      open = "xdg-open";
-      cp = "cp -i";
-      mv = "mv -i";
-    };
+
+  home-manager.users.nartan.programs.git = {
+    enable = true;
+    lfs.enable = true;
+    userName = "nartan";
+    userEmail = "bozec.tanguy@gmail.com";
+    # TODO defaultBranch = "main";
   };
 
   environment.systemPackages = with pkgs; [
