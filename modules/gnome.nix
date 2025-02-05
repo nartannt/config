@@ -21,7 +21,7 @@
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" =
       {
         name = "open terminal ctrl-alt-t";
-        command = "kgx";
+        command = "ghostty";
         binding = "<Ctrl><Alt>t";
       };
 

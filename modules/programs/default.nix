@@ -84,7 +84,6 @@ in {
     steam
     flatpak
 
-    alass
     zola
     wget
     firefox-wayland

@@ -36,7 +36,7 @@ home-manager.users.nartan.programs.starship = {
       ];
         battery = { disabled = true; };
         ocaml = {
-          format = "[$symbol($version )(($switch_indicator$switch_name) )]($style)";
+          format = "[$symbol(($switch_indicator$switch_name) )]($style)";
           global_switch_indicator = "";
           local_switch_indicator = "*";
           style = "bold yellow";
@@ -51,7 +51,7 @@ home-manager.users.nartan.programs.starship = {
             "dune"
             "dune-project"
           ];
-    };
+        };
             git_branch = {
           format = "[$symbol$branch(:$remote_branch)]($style) ";
           symbol = " ";
