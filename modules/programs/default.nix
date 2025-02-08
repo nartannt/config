@@ -95,7 +95,7 @@ in {
 
     # shell
     gnomeExtensions.pano
-    libgda
+    libgda5
     gsound
     #gensio
     zoom-us
