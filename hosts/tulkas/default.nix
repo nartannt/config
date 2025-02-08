@@ -142,18 +142,26 @@
           "garviel" = {
             id = "HB2LELB-WFTTKQ4-UEQTYQQ-XEWZMW5-T2DTVEE-TCC2JQE-YHUBIRS-GQC3CQY";
           };
+          "palacendo" = {
+            id = "FKT3GOB-VSJVWP2-6RJUAOP-O77UVWT-4VKVQ4E-PD6YEBY-NXYPM4K-WNW3CAZ";
+          };
         };
         folders = {
+          "docs" = {
+            path = "~/Documents"
+            devices = [ "tulkas" "palacendo" ];
+          };
           "music" = {
             # Name of folder in Syncthing, also the folder ID
             path = "~/Music"; # Which folder to add to Syncthing
-            devices = [ "tulkas" ]; # Which devices to share the folder with
+            devices = [ "tulkas" "palacendo" ]; # Which devices to share the folder with
           };
           "phone_photos" = {
             path = "~/Pictures/photos/phone_photos";
             devices = [
               "irmo"
               "tulkas"
+              "palacendo"
             ];
           };
           "boox_notes" = {
@@ -161,6 +169,7 @@
             devices = [
               "tulkas"
               "garviel"
+              "palacendo"
             ];
           };
         };

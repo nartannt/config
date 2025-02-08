@@ -97,6 +97,8 @@
     nvidiaBusId = "PCI:2:0:0";
   };
 
+  hardware.openrazer.enable = true;
+
   fonts.packages = with pkgs; [
     fira
     spleen
@@ -114,7 +116,7 @@
         "networkmanager"
       ];
       packages = with pkgs; [
-	# programs (not here)
+    	# programs (not here)
       ];
     };
   };
@@ -128,6 +130,8 @@
     gcc
     pkg-config
     fontconfig
+    openrazer-daemon
+    polychromatic
   ];
 
   services.flatpak.enable = true;

@@ -11,7 +11,7 @@
 
       nartan = {
         isNormalUser = true;
-        extraGroups = [ "wheel" ];
+        extraGroups = [ "wheel" "openrazer" ];
 
         home = "/home/nartan";
         homeMode = "711";
