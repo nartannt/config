@@ -148,8 +148,15 @@
         };
         folders = {
           "docs" = {
-            path = "~/Documents"
+            path = "~/Documents";
             devices = [ "tulkas" "palacendo" ];
+            versionning = {
+              type = "staggered";
+              params = {
+                cleanInterval = "3600";
+                maxAge = "32000000";
+              };
+            };
           };
           "music" = {
             # Name of folder in Syncthing, also the folder ID
