@@ -12,7 +12,7 @@
     let
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
       lib = nixpkgs.lib.extend (final: prev: {
-        incense = import ./lib {
+        myLib = import ./lib {
           lib = final;
           inherit inputs;
         };
@@ -20,9 +20,9 @@
 
     in {
       nixosConfigurations =
-        lib.genAttrs [ "tulkas" "palacendo" ] lib.incense.hostNixosConfig;
-      devShells."x86_64-linux" = lib.incense.mapModulesNoDefault ./devshells
-        (p: pkgs.callPackage p { inherit (lib.incense) mkDevShell; });
+        lib.genAttrs [ "tulkas" "palacendo" ] lib.myLib.hostNixosConfig;
+      devShells."x86_64-linux" = lib.myLib.mapModulesNoDefault ./devshells
+        (p: pkgs.callPackage p { inherit (lib.myLib) mkDevShell; });
 
     };
 }

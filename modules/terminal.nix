@@ -12,6 +12,7 @@
       theme = "light:nord-light,dark:nord";
       window-inherit-working-directory = true;
       window-theme = "ghostty";
+      mouse-hide-while-typing = true;
 
       #keybind = ctrl+plus=increase_font_size:1;
       #keybind = ctrl+minus=decrease_font_size:1;

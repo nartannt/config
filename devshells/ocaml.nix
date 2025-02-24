@@ -4,6 +4,7 @@ with pkgs;
 with ocamlPackages;
 mkDevShell pkgs "ocaml" [
   findlib
+  fix
   dune_3
   ocaml
   ocaml-lsp
@@ -16,4 +17,6 @@ mkDevShell pkgs "ocaml" [
   menhirLib
   fileutils
   merlin
+  menhir
+  rustc
 ]
