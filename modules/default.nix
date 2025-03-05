@@ -3,7 +3,7 @@
 {
   imports = [
     ./users.nix
-    ./terminal.nix
+    ./ghostty.nix
     ./locale.nix
     ./starship.nix
     ./nvim/default.nix
