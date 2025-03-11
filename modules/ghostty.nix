@@ -13,7 +13,7 @@
       window-inherit-working-directory = true;
       window-theme = "ghostty";
       mouse-hide-while-typing = true;
-      font-features = ["-calt"];
+      font-feature = ["-calt"];
       #calt = 0;
 
       #keybind = ctrl+plus=increase_font_size:1;
