@@ -134,7 +134,7 @@
       settings = {
         devices = {
           "tulkas" = {
-            id = "27A5EQP-JE4BTBA-T5NM5UW-RJF3KP5-HENGUIU-MYDWHYO-5XJGZOF-3I4MSA4";
+            id = "AGGXWHR-BREZAAW-KLD2FUJ-PGTCXDS-Q2DJJWO-JPT5KP2-ZSNJGPH-ILVIEQS";
           };
           "irmo" = {
             id = "MVPWKWU-2JUEF6P-LFJRUV6-WBA4SU7-UJ7SNMC-EMOWRQW-VFRSJ2O-JOI3MQM";
@@ -148,6 +148,7 @@
         };
         folders = {
           "docs" = {
+            enable = false;
             path = "~/Documents";
             devices = [ "tulkas" "palacendo" ];
             versionning = {
