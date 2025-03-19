@@ -144,7 +144,7 @@
 
   services = {
     syncthing = {
-      enable = true;
+      enable = false;
       user = "nartan";
       dataDir = "/home/nartan/Documents";
       configDir = "/home/nartan/.config/syncthing";
