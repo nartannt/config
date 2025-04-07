@@ -109,6 +109,9 @@ let @v = '_"_x"_x$"_x"_x'
 autocmd FileType ocaml nnoremap <C-x> @c
 autocmd FileType ocaml nnoremap <C-s> @v
 
+" starts TypstWatch automatically when opening a .typ file
+" TODO
+"autocmd FileType typst autocmd BufEnter :TypstWatch
 " make typst files on save
 " handles errors nicely
 autocmd FileType typst autocmd BufWritePost * | silent make! | cwindow | redraw!
