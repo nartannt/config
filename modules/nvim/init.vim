@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'LnL7/vim-nix'
     Plug 'kaarmu/typst.vim'
+    Plug 'myriad-dreamin/tinymist'
     Plug 'sheerun/vim-polyglot'
     Plug 'kristijanhusak/vim-hybrid-material'
     Plug 'simrat39/rust-tools.nvim'
