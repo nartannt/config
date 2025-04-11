@@ -132,6 +132,8 @@ in {
 
     ghostty
 
+    gnomeExtensions.timer
+
     syncthing
 
     openvpn

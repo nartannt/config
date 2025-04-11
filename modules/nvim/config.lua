@@ -33,11 +33,18 @@ require("conform").setup({
 
 
 -- typst lsp
-require("lspconfig")["tinymist"].setup {
+--require("lspconfig")["tinymist"].setup {
+--    settings = {
+--        formatterMode = "typstyle",
+--        exportPdf = "onSave",
+--        semanticTokens = "disable"
+--    }
+--}
+vim.lsp.config['tinymist'] = {
+    cmd = {'tinymist'},
+    filetypes = {'typst'},
     settings = {
-        formatterMode = "typstyle",
-        exportPdf = "onSave",
-        semanticTokens = "disable"
+        -- ...
     }
 }
 

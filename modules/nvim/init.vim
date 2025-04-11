@@ -117,6 +117,7 @@ autocmd FileType ocaml nnoremap <C-s> @v
 " handles errors nicely
 autocmd FileType typst autocmd BufWritePost * | silent make! | cwindow | redraw!
 
+au BufRead, BufNewFile *.typ set filetype=typst
 
 
 autocmd VimEnter * execute 'wincmd b'
