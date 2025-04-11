@@ -126,7 +126,7 @@ in {
 
     trilium-desktop
     # proton
-    protonvpn-cli_2
+    protonvpn-gui
     #gromacs
     wl-clipboard
 
