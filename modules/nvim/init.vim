@@ -116,6 +116,7 @@ autocmd FileType ocaml nnoremap <C-s> @v
 " make typst files on save
 " handles errors nicely
 autocmd FileType typst autocmd BufWritePost * | silent make! | cwindow | redraw!
+autocmd FileType typst setlocal spell
 
 au BufRead, BufNewFile *.typ set filetype=typst
 

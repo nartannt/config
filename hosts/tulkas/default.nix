@@ -105,6 +105,7 @@
   fonts.packages = with pkgs; [
     fira
     spleen
+    libertine-g
   ];
 
     # List packages installed in system profile. To search, run:
