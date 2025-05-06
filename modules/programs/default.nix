@@ -95,6 +95,7 @@ in {
 
     # shell
     gnomeExtensions.pano
+    gnomeExtensions.lock-keys
     libgda5
     gsound
     #gensio

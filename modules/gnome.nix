@@ -9,6 +9,8 @@
         disable-user-extensions = false;
         disabled-extensions = "disabled";
         enabled-extensions = with pkgs.gnomeExtensions; [
+          pano.extensionUuid
+          lock-keys.extensionUuid
         ];
     };
 
