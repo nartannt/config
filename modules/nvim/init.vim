@@ -24,6 +24,15 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'neovim/nvim-lspconfig'
     Plug 'folke/lsp-colors.nvim'
     Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+    " TODO learn
+    Plug 'terryma/vim-multiple-cursors'
+    Plug 'tpope/vim-surround'
+
+    " TODO setup and learn
+    "Plug 'junegunn/fzf.vim'
+    "Plug 'mhinz/vim-signify'
+    "Plug 'preservim/nerdtree'
+
 call plug#end()
 
 
