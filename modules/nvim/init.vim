@@ -105,6 +105,11 @@ nnoremap <C-j> @b
 let @a = 'Oj'
 nnoremap <C-k> @a
 
+" faster line navigation
+nnoremap <S-e> 10e
+nnoremap <S-w> 10w
+nnoremap <S-b> 10b
+
 " TODO make a list of code file types
 " format code
 autocmd FileType ocaml nix nnoremap <C-f> :Format<CR>hh
