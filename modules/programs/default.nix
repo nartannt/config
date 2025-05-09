@@ -146,7 +146,6 @@ in {
     # communication
     element-desktop
     signal-desktop
-    skypeforlinux
 
     # packages i need but don't really understand
     #nodejs less than 16 for copilot apparently
