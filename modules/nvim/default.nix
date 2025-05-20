@@ -12,6 +12,7 @@ home-manager.users.nartan.programs.neovim = {
     defaultEditor = true;
     extraPackages = with pkgs; [
       nixfmt-classic
+      tinymist
     ];
     inherit extraConfig extraLuaConfig;
 

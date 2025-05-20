@@ -33,20 +33,20 @@ require("conform").setup({
 
 
 -- typst lsp
---require("lspconfig")["tinymist"].setup {
---    settings = {
---        formatterMode = "typstyle",
---        exportPdf = "onSave",
---        semanticTokens = "disable"
---    }
---}
-vim.lsp.config['tinymist'] = {
-    cmd = {'tinymist'},
-    filetypes = {'typst'},
+require("lspconfig")["tinymist"].setup {
     settings = {
-        -- ...
+        formatterMode = "typstyle",
+        exportPdf = "onSave",
+        semanticTokens = "enable"
     }
 }
+--vim.lsp.config['tinymist'] = {
+--    cmd = {'tinymist'},
+--    filetypes = {'typst'},
+--    settings = {
+--        -- ...
+--    }
+--}
 
 -- still formatting but lets the function be called from init.vim
 vim.api.nvim_create_user_command("Format", function(args)
