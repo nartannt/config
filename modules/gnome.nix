@@ -14,6 +14,22 @@
           paperwm.extensionUuid
         ];
     };
+  "org/gnome/shell/extensions/paperwm" = {
+    #animation-time = 0.10;
+    default-focus-mode = 0;
+    disable-topbar-styling = true;
+    #gesture-enabled = false;
+    #horizontal-margin = 5;
+    #selection-border-size = 2;
+    #vertical-margin = 5;
+    #vertical-margin-bottom = 5;
+    #window-gap = 7;
+    #show-focus-mode-icon = false;
+    #show-open-position-icon = false;
+    #show-window-position-bar = false;
+    #show-workspace-indicator = false;
+  };
+
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
