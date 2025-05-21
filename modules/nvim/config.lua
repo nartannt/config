@@ -37,7 +37,8 @@ require("lspconfig")["tinymist"].setup {
     settings = {
         formatterMode = "typstyle",
         exportPdf = "onSave",
-        semanticTokens = "enable"
+        semanticTokens = "enable",
+        typstExtraArgs = { "--ignore-system-fonts"},
     }
 }
 --vim.lsp.config['tinymist'] = {

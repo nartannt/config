@@ -95,6 +95,7 @@ in {
 
     # shell
     gnomeExtensions.pano
+    gnomeExtensions.paperwm
     gnomeExtensions.lock-keys
     libgda5
     gsound
