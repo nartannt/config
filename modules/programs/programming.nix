@@ -9,7 +9,7 @@ let
 
   git_packages = with pkgs; [git git-lfs];
 
-  my-python-packages = p: with p; [ pandas nltk numpy matplotlib ];
+  my-python-packages = p: with p; [ numpy matplotlib /*pandas nltk*/ ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 
   #_packages = with pkgs; [ ];

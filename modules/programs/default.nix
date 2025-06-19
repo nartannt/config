@@ -47,11 +47,11 @@ in {
     tree
     findutils
     patchelf
+    lshw
 
     # TODO sort programs
     # email
     # utils
-    lshw
     #graphviz
 
     #programming
@@ -68,7 +68,7 @@ in {
     ffmpeg
     picard
     # typesetting
-    ghostscript
+    #ghostscript
     texlive.combined.scheme-full
     texlivePackages.tikz-cd
     texliveFull
@@ -103,7 +103,7 @@ in {
     zoom-us
 
     rPackages.proton
-    hydroxide
+    #hydroxide
 
     pkgs.gnome.gvfs
 
