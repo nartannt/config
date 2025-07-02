@@ -77,15 +77,15 @@ augroup vimtex_config
     au User VimtexEventQuit call vimtex#compiler#clean(0)
 augroup END
 " this is temporary
-let g:Tex_IgnoredWarnings = 
-    \'Underfull'."\n".
-    \'Overfull'."\n".
-    \'specifier changed to'."\n".
-    \'You have requested'."\n".
-    \'Missing number, treated as zero.'."\n".
-    \'There were undefined references'."\n".
-    \'Citation %.%# undefined'."\n".
-    \'Double space found.'."\n"
+"let g:Tex_IgnoredWarnings = 
+"    \'Underfull'."\n".
+"    \'Overfull'."\n".
+"    \'specifier changed to'."\n".
+"    \'You have requested'."\n".
+"    \'Missing number, treated as zero.'."\n".
+"    \'There were undefined references'."\n".
+"    \'Citation %.%# undefined'."\n".
+"    \'Double space found.'."\n"
 "let g:Tex_IgnoreLevel = 8
 let g:tex_conceal = ""
 let g:vimtex_syntax_enabled = 0
@@ -110,6 +110,12 @@ nnoremap <S-e> 10e
 nnoremap <S-w> 10w
 nnoremap <S-b> 10b
 
+" faster window navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
 " TODO make a list of code file types
 " format code
 autocmd FileType ocaml nix nnoremap <C-f> :Format<CR>hh
@@ -124,6 +130,9 @@ let @v = '_"_x"_x$"_x"_x'
 autocmd FileType ocaml nnoremap <C-x> @c
 autocmd FileType ocaml nnoremap <C-s> @v
 
+
+"command StartSplit vsplit set nu! split
+
 " starts TypstWatch automatically when opening a .typ file
 " TODO
 "autocmd FileType typst autocmd BufEnter :TypstWatch
@@ -133,7 +142,6 @@ autocmd FileType typst autocmd BufWritePost * | silent make! | cwindow | redraw!
 autocmd FileType typst setlocal spell
 
 au BufRead, BufNewFile *.typ set filetype=typst
-
 
 autocmd VimEnter * execute 'wincmd b'
 
@@ -169,10 +177,3 @@ autocmd FileType coq noremap <C-t> :CoqToLine<CR>hh  " undo last line
 
 " nabla will be useful for LaTeX
 "nnoremap <C-p> :lua require("nabla").popup()<CR> " Customize with popup({border = ...})  : `single` (default), `double`, `rounded`
-
-" add digraph for coq project (might want to customise this further for
-" proper use)
-digraph rt 8866
-digraph sc 8827
-
-"lua require("~/.config/nvim/config.lua")
