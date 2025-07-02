@@ -56,6 +56,8 @@ in {
 
     #programming
     nixfmt-classic
+    nix-prefetch
+    nix-prefetch-github
 
     # Python
     # general tools

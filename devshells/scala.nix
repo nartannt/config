@@ -17,8 +17,15 @@ let
           patches = [];
         });
 
+  upickle = pkgs.fetchFromGitHub {
+    owner = "com-lihaoyi";
+    repo = "upickle";
+    rev = "04681edbbe077c770dc74d560cfd747dcaee4a84";
+    hash = "sha256-hmgwxdpPek3t2PxxvyGZmKAhn4cWugu9I861OuVMGPw=";
+  };
 
-  buildInputs = [ sfml ];
+
+  buildInputs = [ sfml upickle ];
 
         nativeBuildInputs =
           (with pkgs; [
