@@ -99,7 +99,6 @@ in {
     gnomeExtensions.pano
     gnomeExtensions.paperwm
     gnomeExtensions.lock-keys
-    libgda5
     gsound
     #gensio
     zoom-us
