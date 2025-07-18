@@ -64,7 +64,7 @@ in {
     # media
     fragments
     # music
-    beets
+    #beets
     polaris
     vlc
     ffmpeg
@@ -112,6 +112,8 @@ in {
     xournalpp
 
     planify
+
+    litemdview
 
     geeqie
 
