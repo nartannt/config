@@ -64,7 +64,7 @@ in {
     # media
     fragments
     # music
-    #beets
+    beets
     polaris
     vlc
     ffmpeg
