@@ -65,6 +65,7 @@ in {
     fragments
     # music
     beets
+    nicotine-plus
     polaris
     vlc
     ffmpeg
