@@ -23,6 +23,10 @@ in {
     };
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "libsoup-2.74.3"
+  ];
+
 
   home-manager.users.nartan.programs.git = {
     enable = true;
@@ -106,8 +110,6 @@ in {
 
     rPackages.proton
     #hydroxide
-
-    pkgs.gnome.gvfs
 
     pdftk
     xournalpp
