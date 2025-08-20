@@ -34,11 +34,14 @@ require("conform").setup({
 
 -- typst lsp
 require("lspconfig")["tinymist"].setup {
+     root_dir = function(_, bufnr)
+       return vim.fs.root(bufnr, { ".git" }) or vim.fn.expand("%:p:h")
+     end,
     settings = {
         formatterMode = "typstyle",
         exportPdf = "onSave",
         semanticTokens = "enable",
-        typstExtraArgs = { "--ignore-system-fonts", "--root"},
+        typstExtraArgs = { "--ignore-system-fonts" },
     }
 }
 --vim.lsp.config['tinymist'] = {
