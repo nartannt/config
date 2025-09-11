@@ -81,6 +81,7 @@ in {
     texliveFull
     texlab
     typst
+    pandoc
     # general utilities
     #nodejs
 
