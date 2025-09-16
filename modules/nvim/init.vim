@@ -111,6 +111,9 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
+" navigating between brackets
+nnoremap <ù> <%>
+
 " TODO make a list of code file types
 " format code
 autocmd FileType ocaml nix nnoremap <C-f> :Format<CR>hh
