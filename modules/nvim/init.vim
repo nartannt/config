@@ -112,7 +112,7 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 " navigating between brackets
-nnoremap <ù> <%>
+nnoremap ù %
 
 " TODO make a list of code file types
 " format code
