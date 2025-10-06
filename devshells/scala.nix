@@ -31,6 +31,7 @@ let
           (with pkgs; [
             boehmgc
             sbt
+            cmake
             # which
           ])
           ++ (with pkgs.llvmPackages; [
