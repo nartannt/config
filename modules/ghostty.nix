@@ -9,7 +9,7 @@
      settings = {
       cursor-style = "bar";
       gtk-titlebar = false;
-      theme = "light:nord-light,dark:nord";
+      theme = "light:Nord Light,dark:Nord";
       window-inherit-working-directory = true;
       window-theme = "ghostty";
       mouse-hide-while-typing = true;
