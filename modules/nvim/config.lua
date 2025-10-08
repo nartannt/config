@@ -33,7 +33,7 @@ require("conform").setup({
 
 
 -- typst lsp
-require("lspconfig")["tinymist"].setup {
+vim.lsp.config("tinymist", {
      root_dir = function(_, bufnr)
        return vim.fs.root(bufnr, { ".git" }) or vim.fn.expand("%:p:h")
      end,
@@ -43,7 +43,7 @@ require("lspconfig")["tinymist"].setup {
         semanticTokens = "enable",
         --typstExtraArgs = { "--ignore-system-fonts" },
     }
-}
+   })
 --vim.lsp.config['tinymist'] = {
 --    cmd = {'tinymist'},
 --    filetypes = {'typst'},
@@ -70,25 +70,24 @@ local util = require 'lspconfig.util'
 
 
 -- rust
-require("lspconfig").rust_analyzer.setup{}
-local opts = {
-    -- rust tools
-    tools = {
-        inlay_hints = {
-            parameter_hints_prefix = "// ",
-            -- hint colour
-            highlight = "Hints",
-        },
-    },
-}
-require("rust-tools").setup(opts)
+vim.lsp.config("rust_analyzer", {
+	-- rust tools
+	tools = {
+	   inlay_hints = {
+	       parameter_hints_prefix = "// ",
+	       -- hint colour
+	       highlight = "Hints",
+	   },
+	},
+})
+--require("rust-tools").setup(opts)
 
 
 -- ocaml
-require("lspconfig").ocamllsp.setup {}
+vim.lsp.config("ocamllsp", {})
 
 --LaTeX
-require("lspconfig").texlab.setup {}
+vim.lsp.config("texlab", {})
 
 
 -- lsp key mappings

@@ -26,7 +26,12 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
     Plug 'godlygeek/tabular'
     Plug 'preservim/vim-markdown'
-    "Plug 'terryma/vim-multiple-cursors'
+
+    Plug 'jalvesaq/zotcite'
+    " dependencies of zotcite
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'jalvesaq/cmp-zotcite'
 
 call plug#end()
 
@@ -175,6 +180,3 @@ autocmd FileType coq noremap <C-t> :CoqToLine<CR>hh  " undo last line
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
-
-" nabla will be useful for LaTeX
-"nnoremap <C-p> :lua require("nabla").popup()<CR> " Customize with popup({border = ...})  : `single` (default), `double`, `rounded`
