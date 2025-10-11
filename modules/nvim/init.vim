@@ -27,11 +27,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'godlygeek/tabular'
     Plug 'preservim/vim-markdown'
 
-    Plug 'jalvesaq/zotcite'
-    " dependencies of zotcite
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'jalvesaq/cmp-zotcite'
+    "Plug 'jalvesaq/zotcite'
+    "" dependencies of zotcite
+    "Plug 'nvim-telescope/telescope.nvim'
+    "Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'main' }
+    "Plug 'jalvesaq/cmp-zotcite'
 
 call plug#end()
 

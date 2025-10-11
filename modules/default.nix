@@ -6,6 +6,8 @@
     ./ghostty.nix
     ./locale.nix
     ./starship.nix
+    ./zotero.nix
+    ./sioyek.nix
     ./nvim/default.nix
     ./programs/default.nix
     ./gnome.nix

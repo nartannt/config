@@ -86,9 +86,6 @@ in {
     #nodejs
 
     # for gaming purposes
-    lutris
-    wine
-    wine-staging
     steam
     flatpak
 
@@ -113,6 +110,7 @@ in {
     #hydroxide
 
     pdftk
+    sioyek
     xournalpp
 
     planify

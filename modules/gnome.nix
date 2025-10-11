@@ -2,7 +2,17 @@
 
 {
 
-  # these are stolen from https://heywoodlh.io/nixos-gnome-settings-and-keyboard-shortcuts 
+  home-manager.users.nartan.xdg.mimeApps = {
+
+    enable = true;
+    defaultApplications = {
+    "application/pdf" = ["sioyek.desktop" "gnome.evinnce.desktop" "firefox.desktop"];
+    };
+  };
+
+  # these are stolen from https://heywoodlh.io/nixos-gnome-settings-and-keyboard-shortcuts
+
+
   home-manager.users.nartan.dconf.settings = {
 
     "org/gnome/shell" = {

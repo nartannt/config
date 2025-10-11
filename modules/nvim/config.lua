@@ -44,13 +44,13 @@ vim.lsp.config("tinymist", {
         --typstExtraArgs = { "--ignore-system-fonts" },
     }
    })
---vim.lsp.config['tinymist'] = {
+--vim.lsp.config("tinymist", {
 --    cmd = {'tinymist'},
 --    filetypes = {'typst'},
 --    settings = {
 --        -- ...
 --    }
---}
+--})
 
 -- still formatting but lets the function be called from init.vim
 vim.api.nvim_create_user_command("Format", function(args)
@@ -88,7 +88,6 @@ vim.lsp.config("ocamllsp", {})
 
 --LaTeX
 vim.lsp.config("texlab", {})
-
 
 -- lsp key mappings
 
