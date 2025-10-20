@@ -31,8 +31,8 @@ in {
   home-manager.users.nartan.programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "nartan";
-    userEmail = "bozec.tanguy@gmail.com";
+    settings.user.name = "nartan";
+    settings.user.email = "bozec.tanguy@gmail.com";
     # TODO defaultBranch = "main";
   };
 
