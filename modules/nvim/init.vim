@@ -121,8 +121,8 @@ nnoremap ù %
 
 " TODO make a list of code file types
 " format code
-autocmd FileType ocaml nix nnoremap <C-f> :Format<CR>hh
-autocmd ExitPre ocaml nix :Format
+autocmd FileType ocaml,nix nnoremap <C-f> :Format<CR>hh
+autocmd ExitPre ocaml,nix :Format
 "autocmd FileType nix nnoremap <C-f> :Format<CR>hh
 
 

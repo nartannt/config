@@ -123,6 +123,7 @@ in {
     wormhole-rs
     croc
     #minecraft
+    zola
     zotero
     tagger
 
