@@ -91,7 +91,7 @@ in {
 
     zola
     wget
-    firefox-wayland
+    firefox
 
     vim
     neovim
