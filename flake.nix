@@ -20,7 +20,7 @@
 
     in {
       nixosConfigurations =
-        lib.genAttrs [ "tulkas" "palacendo" ] lib.myLib.hostNixosConfig;
+        lib.genAttrs [ "tulkas" "palacendo" "abaddon" ] lib.myLib.hostNixosConfig;
       devShells."x86_64-linux" = lib.myLib.mapModulesNoDefault ./devshells
         (p: pkgs.callPackage p { inherit (lib.myLib) mkDevShell; });
 
