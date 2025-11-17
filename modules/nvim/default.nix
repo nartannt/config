@@ -14,6 +14,24 @@ home-manager.users.nartan.programs.neovim = {
       nixfmt-classic
       tinymist
     ];
+
+
+    ##stolen from https://github.com/junegunn/vim-plug/issues/1010
+    #start = [
+    #      # vim-plug # <--- Does not work as-is, so the below override is required.
+    #      (vim-plug.overrideAttrs (old: {
+    #        postInstall = ''
+    #          mkdir -pv $target/autoload
+    #          ln -s $target/plug.vim $target/autoload
+    #        '';
+    #      }))
+    #    ];
+    #  };
+
+    plugins = with pkgs.vimPlugins; [ 
+    	Coqtail
+    ];
+
     inherit extraConfig extraLuaConfig;
 
     #plugins = [
