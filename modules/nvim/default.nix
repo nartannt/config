@@ -1,20 +1,31 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
-let 
+let
   extraConfig = builtins.readFile ./init.vim;
   extraLuaConfig = builtins.readFile ./config.lua;
-in
-{
-home-manager.users.nartan.programs.neovim = {
+  fromGitHub = { repo, rev, sha256 }:
+    let
+      parts = builtins.filter (val: val != [ ]) (builtins.split "/" repo);
+      owner = builtins.elemAt parts 0;
+      name = builtins.elemAt parts 1;
+
+      src = pkgs.fetchFromGitHub {
+        inherit owner rev sha256;
+        repo = name;
+      };
+
+    in pkgs.vimUtils.buildVimPlugin {
+      inherit src;
+      pname = lib.strings.sanitizeDerivationName repo;
+      version = rev;
+    };
+in {
+  home-manager.users.nartan.programs.neovim = {
     enable = true;
     vimAlias = true;
     viAlias = true;
     defaultEditor = true;
-    extraPackages = with pkgs; [
-      nixfmt-classic
-      tinymist
-    ];
-
+    extraPackages = with pkgs; [ nixfmt-classic tinymist ];
 
     ##stolen from https://github.com/junegunn/vim-plug/issues/1010
     #start = [
@@ -28,54 +39,44 @@ home-manager.users.nartan.programs.neovim = {
     #    ];
     #  };
 
-    plugins = with pkgs.vimPlugins; [ 
-    	Coqtail
+    plugins = with pkgs.vimPlugins; [
+      Coqtail
+      vimtex
+      csv-vim
+      vim-ocaml
+      conform-nvim
+      nabla-nvim
+      vim-fugitive
+      vim-nix
+      typst-vim
+      vim-polyglot
+      vim-hybrid-material
+      nvim-cmp
+      nvim-snippy
+      cmp-snippy
+      nvim-lspconfig
+      lsp-colors-nvim
+      tabular
+      vim-markdown
+      onenord-nvim
+      (fromGitHub {
+        repo = "Myriad-Dreamin/tinymist";
+        rev = "a42700c04bb0e780fb7c44eabce84834b767948f";
+        sha256 = "sha256-U+TwHCncC4Umjl4Ko7jC7zT0rJhcmWLpW+oC6eKEHz8=";
+      })
+      #rust-tools-nvim
+      #texlab
+      #merlin
     ];
+
+    #Plug 'jalvesaq/zotcite'
+    # dependencies of zotcite
+    #Plug 'nvim-telescope/telescope.nvim'
+    #Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'main' }
+    #Plug 'jalvesaq/cmp-zotcite'
 
     inherit extraConfig extraLuaConfig;
 
-    #plugins = [
-    #  pkgs.vimPlugins.onenord-nvim
-    #  pkgs.vimPlugins.vimtex
-    #  pkgs.vimPlugins.Coqtail
-    #  #pkgs.vimPlugins.texlab
-    #  pkgs.vimPlugins.vim-ocaml
-    #  #pkgs.vimPlugins.merlin
-    #  pkgs.vimPlugins.conform-nvim
-    #  pkgs.vimPlugins.nabla-nvim
-    #  pkgs.vimPlugins.vim-fugitive
-    #  pkgs.vimPlugins.vim-nix
-    #  pkgs.vimPlugins.typst-vim
-    #  pkgs.vimPlugins.vim-polyglot
-    #  pkgs.vimPlugins.vim-hybrid-material
-    #  pkgs.vimPlugins.rust-tools-nvim
-    #  pkgs.vimPlugins.nvim-cmp
-    #  pkgs.vimPlugins.nvim-snippy
-    #  pkgs.vimPlugins.cmp-snippy
-    #  pkgs.vimPlugins.nvim-lspconfig
-    #  pkgs.vimPlugins.lsp-colors-nvim
-    #  
-    ##Plug 'lervag/vimtex'
-    ##Plug 'whonore/Coqtail'
-    ##Plug 'chrisbra/csv.vim'
-    ##Plug 'latex-lsp/texlab'
-    ##Plug 'ocaml/vim-ocaml'
-    ##Plug 'ocaml/merlin'
-    ##Plug 'stevearc/conform.nvim'
-    ##Plug 'jbyuki/nabla.nvim'
-    ##Plug 'tpope/vim-fugitive'
-    ##Plug 'LnL7/vim-nix'
-    ##Plug 'kaarmu/typst.vim'
-    ##Plug 'sheerun/vim-polyglot'
-    ##Plug 'kristijanhusak/vim-hybrid-material'
-    ##Plug 'simrat39/rust-tools.nvim'
-    ##Plug 'hrsh7th/nvim-cmp'
-    ##Plug 'dcampos/nvim-snippy'
-    ##Plug 'dcampos/cmp-snippy'
-    ##Plug 'neovim/nvim-lspconfig'
-    ##Plug 'folke/lsp-colors.nvim'
-    #];
-
-};
+  };
 }
-  
+

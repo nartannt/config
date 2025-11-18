@@ -2,40 +2,31 @@
 set nocompatible
 
 " plugins
-call plug#begin('~/.config/nvim/plugged')
-    Plug 'lervag/vimtex'
-    Plug 'whonore/Coqtail'
-    Plug 'chrisbra/csv.vim'
-    Plug 'latex-lsp/texlab'
-    Plug 'ocaml/vim-ocaml'
-    Plug 'ocaml/merlin'
-    Plug 'stevearc/conform.nvim'
-    Plug 'jbyuki/nabla.nvim'
-    Plug 'tpope/vim-fugitive'
-    Plug 'LnL7/vim-nix'
-    Plug 'kaarmu/typst.vim'
-    Plug 'myriad-dreamin/tinymist'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'kristijanhusak/vim-hybrid-material'
-    Plug 'simrat39/rust-tools.nvim'
-    Plug 'hrsh7th/nvim-cmp'
-    Plug 'dcampos/nvim-snippy'
-    Plug 'dcampos/cmp-snippy'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'folke/lsp-colors.nvim'
-    Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
-    Plug 'godlygeek/tabular'
-    Plug 'preservim/vim-markdown'
-
-    "Plug 'jalvesaq/zotcite'
-    "" dependencies of zotcite
-    "Plug 'nvim-telescope/telescope.nvim'
-    "Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'main' }
-    "Plug 'jalvesaq/cmp-zotcite'
-
-call plug#end()
-
-
+"call plug#begin('~/.config/nvim/plugged')
+"    Plug 'lervag/vimtex'
+"    Plug 'whonore/Coqtail'
+"    Plug 'chrisbra/csv.vim'
+"    Plug 'latex-lsp/texlab'
+"    Plug 'ocaml/vim-ocaml'
+"    Plug 'ocaml/merlin'
+"    Plug 'stevearc/conform.nvim'
+"    Plug 'jbyuki/nabla.nvim'
+"    Plug 'tpope/vim-fugitive'
+"    Plug 'LnL7/vim-nix'
+"    Plug 'kaarmu/typst.vim'
+"    Plug 'myriad-dreamin/tinymist'
+"    Plug 'sheerun/vim-polyglot'
+"    Plug 'kristijanhusak/vim-hybrid-material'
+"    Plug 'simrat39/rust-tools.nvim'
+"    Plug 'hrsh7th/nvim-cmp'
+"    Plug 'dcampos/nvim-snippy'
+"    Plug 'dcampos/cmp-snippy'
+"    Plug 'neovim/nvim-lspconfig'
+"    Plug 'folke/lsp-colors.nvim'
+"    Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+"    Plug 'godlygeek/tabular'
+"    Plug 'preservim/vim-markdown'
+"call plug#end()
 
 "vim theme
 
