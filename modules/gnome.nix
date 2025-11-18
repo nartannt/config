@@ -46,6 +46,7 @@
     "image/avif" = ["org.gnome.Loupe.desktop"];
     "image/heic" = ["org.gnome.Loupe.desktop"];
     "image/jxl" = ["org.gnome.Loupe.desktop"];
+
     };
   };
 
@@ -59,6 +60,11 @@
     #};
 
     "org/gnome/shell" = {
+       favorite-apps = [
+          "firefox.desktop"
+          "org.gnome.Nautilus.desktop"
+         ];
+
         disable-user-extensions = false;
         disabled-extensions = "disabled";
         enabled-extensions = with pkgs.gnomeExtensions; [
