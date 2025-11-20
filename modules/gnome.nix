@@ -6,52 +6,58 @@
 
     enable = true;
     defaultApplications = {
-    "application/pdf" = ["sioyek.desktop" "gnome.evinnce.desktop" "firefox.desktop"];
+      "application/pdf" =
+        [ "sioyek.desktop" "gnome.evinnce.desktop" "firefox.desktop" ];
 
-    # calendar
-    "text/calendar" = ["thunderbird.desktop"];
-    "application/vnd.sus-calendar" = ["thunderbird.desktop"];
-    "text/x-vcalendar" = ["thunderbird.desktop"];
+      # browser
+      "text/html" = "firefow.desktop";
+      "x-scheme-handler/http" = "firefow.desktop";
+      "x-scheme-handler/https" = "firefow.desktop";
+      "x-scheme-handler/about" = "firefow.desktop";
+      "x-scheme-handler/unknown" = "firefow.desktop";
 
-    # email
-    "message/rfc822" = ["thunderbird.desktop"];
-    "application/mbox" = ["thunderbird.desktop"];
-    "application/vnd.sema" = ["thunderbird.desktop"];
-    "application/vnd.semd" = ["thunderbird.desktop"];
-    "application/vnd.semf" = ["thunderbird.desktop"];
-    "application/vnd.seemail" = ["thunderbird.desktop"];
-    "x-scheme-handler/mailto" = ["thunderbird.desktop"];
+      # calendar
+      "text/calendar" = [ "thunderbird.desktop" ];
+      "application/vnd.sus-calendar" = [ "thunderbird.desktop" ];
+      "text/x-vcalendar" = [ "thunderbird.desktop" ];
 
-    # images
-    "image/jpeg" = ["org.gnome.Loupe.desktop"];
-    "image/png" = ["org.gnome.Loupe.desktop"];
-    "image/gif" = ["org.gnome.Loupe.desktop"];
-    "image/webp" = ["org.gnome.Loupe.desktop"];
-    "image/tiff" = ["org.gnome.Loupe.desktop"];
-    "image/x-tga" = ["org.gnome.Loupe.desktop"];
-    "image/vnd-ms.dds" = ["org.gnome.Loupe.desktop"];
-    "image/x-dds" = ["org.gnome.Loupe.desktop"];
-    "image/bmp" = ["org.gnome.Loupe.desktop"];
-    "image/vnd.microsoft.icon" = ["org.gnome.Loupe.desktop"];
-    "image/vnd.radiance" = ["org.gnome.Loupe.desktop"];
-    "image/x-exr" = ["org.gnome.Loupe.desktop"];
-    "image/x-portable-bitmap" = ["org.gnome.Loupe.desktop"];
-    "image/x-portable-graymap" = ["org.gnome.Loupe.desktop"];
-    "image/x-portable-pixmap" = ["org.gnome.Loupe.desktop"];
-    "image/x-portable-anymap" = ["org.gnome.Loupe.desktop"];
-    "image/x-qoi" = ["org.gnome.Loupe.desktop"];
-    "image/qoi" = ["org.gnome.Loupe.desktop"];
-    "image/svg+xml" = ["org.gnome.Loupe.desktop"];
-    "image/svg+xml-compressed" = ["org.gnome.Loupe.desktop"];
-    "image/avif" = ["org.gnome.Loupe.desktop"];
-    "image/heic" = ["org.gnome.Loupe.desktop"];
-    "image/jxl" = ["org.gnome.Loupe.desktop"];
+      # email
+      "message/rfc822" = [ "thunderbird.desktop" ];
+      "application/mbox" = [ "thunderbird.desktop" ];
+      "application/vnd.sema" = [ "thunderbird.desktop" ];
+      "application/vnd.semd" = [ "thunderbird.desktop" ];
+      "application/vnd.semf" = [ "thunderbird.desktop" ];
+      "application/vnd.seemail" = [ "thunderbird.desktop" ];
+      "x-scheme-handler/mailto" = [ "thunderbird.desktop" ];
 
+      # images
+      "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
+      "image/png" = [ "org.gnome.Loupe.desktop" ];
+      "image/gif" = [ "org.gnome.Loupe.desktop" ];
+      "image/webp" = [ "org.gnome.Loupe.desktop" ];
+      "image/tiff" = [ "org.gnome.Loupe.desktop" ];
+      "image/x-tga" = [ "org.gnome.Loupe.desktop" ];
+      "image/vnd-ms.dds" = [ "org.gnome.Loupe.desktop" ];
+      "image/x-dds" = [ "org.gnome.Loupe.desktop" ];
+      "image/bmp" = [ "org.gnome.Loupe.desktop" ];
+      "image/vnd.microsoft.icon" = [ "org.gnome.Loupe.desktop" ];
+      "image/vnd.radiance" = [ "org.gnome.Loupe.desktop" ];
+      "image/x-exr" = [ "org.gnome.Loupe.desktop" ];
+      "image/x-portable-bitmap" = [ "org.gnome.Loupe.desktop" ];
+      "image/x-portable-graymap" = [ "org.gnome.Loupe.desktop" ];
+      "image/x-portable-pixmap" = [ "org.gnome.Loupe.desktop" ];
+      "image/x-portable-anymap" = [ "org.gnome.Loupe.desktop" ];
+      "image/x-qoi" = [ "org.gnome.Loupe.desktop" ];
+      "image/qoi" = [ "org.gnome.Loupe.desktop" ];
+      "image/svg+xml" = [ "org.gnome.Loupe.desktop" ];
+      "image/svg+xml-compressed" = [ "org.gnome.Loupe.desktop" ];
+      "image/avif" = [ "org.gnome.Loupe.desktop" ];
+      "image/heic" = [ "org.gnome.Loupe.desktop" ];
+      "image/jxl" = [ "org.gnome.Loupe.desktop" ];
     };
   };
 
   # these are stolen from https://heywoodlh.io/nixos-gnome-settings-and-keyboard-shortcuts
-
 
   home-manager.users.nartan.dconf.settings = {
 
@@ -75,7 +81,7 @@
     };
 
     "org/gnome/shell/extensions/paperwm" = {
-      animation-time = 0.10;
+      animation-time = 0.1;
       default-focus-mode = 0;
       disable-topbar-styling = true;
       show-focus-mode-icon = false;
@@ -89,7 +95,6 @@
       vertical-margin-bottom = 5;
       window-gap = 7;
     };
-
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
