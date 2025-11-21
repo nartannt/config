@@ -10,11 +10,11 @@
         [ "sioyek.desktop" "gnome.evinnce.desktop" "firefox.desktop" ];
 
       # browser
-      "text/html" = "firefow.desktop";
-      "x-scheme-handler/http" = "firefow.desktop";
-      "x-scheme-handler/https" = "firefow.desktop";
-      "x-scheme-handler/about" = "firefow.desktop";
-      "x-scheme-handler/unknown" = "firefow.desktop";
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/about" = "firefox.desktop";
+      "x-scheme-handler/unknown" = "firefox.desktop";
 
       # calendar
       "text/calendar" = [ "thunderbird.desktop" ];
