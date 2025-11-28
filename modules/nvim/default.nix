@@ -44,6 +44,7 @@ in {
       vimtex
       csv-vim
       vim-ocaml
+      #ocaml.nvim
       conform-nvim
       nabla-nvim
       vim-fugitive
