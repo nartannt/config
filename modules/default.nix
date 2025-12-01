@@ -11,6 +11,7 @@
     ./nvim/default.nix
     ./programs/default.nix
     ./gnome.nix
+    ./firefox.nix
   ];
 
   nix = {
