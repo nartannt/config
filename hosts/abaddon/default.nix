@@ -84,7 +84,7 @@
   users.users.nartan = {
     isNormalUser = true;
     description = "nartan";
-    extraGroups = [ "networkmanager" "wheel" ];
+    #extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
     ];
