@@ -41,6 +41,7 @@ in {
 
     plugins = with pkgs.vimPlugins; [
       Coqtail
+      lean-nvim
       vimtex
       csv-vim
       vim-ocaml
