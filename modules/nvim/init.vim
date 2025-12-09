@@ -55,6 +55,9 @@ let g:vimtex_syntax_enabled = 0
 " detects why3 files
 au BufRead,BufNewFile *.why,*.mlw set filetype=why3
 
+" detects lean files
+au BufRead,BufNewFile *.lean, set filetype=lean
+
 " ctrl+c and esc have slightly different semantics
 " ex: C-v then I then C-c or esc give different results
 inoremap <C-c> <esc>
@@ -113,14 +116,6 @@ aug CSV_Editing
 		au BufRead,BufWritePost *.csv :1ArrangeColumn | %ArrangeColumn | Header
 		au BufWritePre *.csv :%UnArrangeColumn
 aug end
-
-" copilot settings
-" disable for text
-let g:copilot_filetypes = {
-   \'typst': v:false,
-   \'tex': v:false,
-   \'coq': v:false,
-\}
 
 " set tab length at three spaces
 " show existing tab with 3 spaces width
