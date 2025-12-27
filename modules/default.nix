@@ -12,6 +12,7 @@
     ./programs/default.nix
     ./gnome.nix
     ./firefox.nix
+    ./music/default.nix
   ];
 
   nix = {

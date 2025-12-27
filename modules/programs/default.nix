@@ -53,6 +53,8 @@ in {
     patchelf
     lshw
 
+    pulseaudio
+
     # TODO sort programs
     # email
     # utils
@@ -68,7 +70,6 @@ in {
     # media
     fragments
     # music
-    beets
     nicotine-plus
     polaris
     vlc
