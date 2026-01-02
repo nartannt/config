@@ -111,7 +111,6 @@ in {
     #hydroxide
 
     pdftk
-    sioyek
     xournalpp
 
     planify

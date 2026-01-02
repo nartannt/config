@@ -1,10 +1,12 @@
-
 { config, pkgs, ... }:
 
 {
-  programs = {
-     beets = {
-      enable = true;
-   }
-};
-};
+  home-manager.users.nartan.programs.beets = {
+     enable = true;
+     #settings = builtins.readFile ./settings.yaml;
+     settings = 
+#plugins: discogs #
+     {plugins = ["discogs" "chroma" "fetchart" "embedart" "parentwork" "scrub" "duplicates" "missing"];
+  };
+   };
+}
