@@ -115,9 +115,9 @@ in {
 
     planify
 
-    litemdview
+    #litemdview
 
-    geeqie
+    #geeqie
 
     magic-wormhole
     wormhole-rs
