@@ -118,8 +118,6 @@ in {
 
     planify
 
-    litemdview
-
     geeqie
 
     magic-wormhole
