@@ -2,8 +2,13 @@
 
 let
   extraConfig = builtins.readFile ./init.vim;
-  extraLuaConfig = builtins.readFile ./config.lua;
-  fromGitHub = { repo, rev, sha256 }:
+  initLua = builtins.readFile ./config.lua;
+  fromGitHub =
+    {
+      repo,
+      rev,
+      sha256,
+    }:
     let
       parts = builtins.filter (val: val != [ ]) (builtins.split "/" repo);
       owner = builtins.elemAt parts 0;
@@ -14,18 +19,23 @@ let
         repo = name;
       };
 
-    in pkgs.vimUtils.buildVimPlugin {
+    in
+    pkgs.vimUtils.buildVimPlugin {
       inherit src;
       pname = lib.strings.sanitizeDerivationName repo;
       version = rev;
     };
-in {
+in
+{
   home-manager.users.nartan.programs.neovim = {
     enable = true;
     vimAlias = true;
     viAlias = true;
     defaultEditor = true;
-    extraPackages = with pkgs; [ nixfmt-classic tinymist ];
+    extraPackages = with pkgs; [
+      nixfmt
+      tinymist
+    ];
 
     ##stolen from https://github.com/junegunn/vim-plug/issues/1010
     #start = [
@@ -78,8 +88,7 @@ in {
     #Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'main' }
     #Plug 'jalvesaq/cmp-zotcite'
 
-    inherit extraConfig extraLuaConfig;
+    inherit extraConfig initLua;
 
   };
 }
-

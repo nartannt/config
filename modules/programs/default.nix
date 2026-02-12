@@ -60,7 +60,7 @@ in {
     ferdium
 
     #programming
-    nixfmt-classic
+    nixfmt
     nix-prefetch
     nix-prefetch-github
 
