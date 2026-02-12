@@ -8,11 +8,12 @@
     ./starship.nix
     ./zotero.nix
     ./sioyek.nix
-    ./nvim/default.nix
-    ./programs/default.nix
     ./gnome.nix
     ./firefox.nix
+    ./programs/default.nix
     ./music/default.nix
+    ./services/default.nix
+    ./nvim/default.nix
   ];
 
   nix = {
