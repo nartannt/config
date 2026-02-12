@@ -8,6 +8,7 @@ in {
 
   services.openssh.enable = true;
 
+
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
@@ -23,10 +24,7 @@ in {
     };
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "libsoup-2.74.3"
-  ];
-
+  nixpkgs.config.permittedInsecurePackages = [ "libsoup-2.74.3" ];
 
   home-manager.users.nartan.programs.git = {
     enable = true;
@@ -59,6 +57,7 @@ in {
     # email
     # utils
     #graphviz
+    ferdium
 
     #programming
     nixfmt-classic
@@ -108,7 +107,11 @@ in {
     zoom-us
 
     rPackages.proton
+    protonmail-bridge
+    protonmail-bridge-gui
     #hydroxide
+
+    #tt-rss
 
     pdftk
     xournalpp

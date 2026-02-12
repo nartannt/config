@@ -77,6 +77,7 @@
           pano.extensionUuid
           lock-keys.extensionUuid
           paperwm.extensionUuid
+          proton-bridge-button.extensionUuid
         ];
     };
 
