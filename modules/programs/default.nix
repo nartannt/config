@@ -96,6 +96,7 @@ in {
     vim
     neovim
     lua
+    #python310Packages.pynvim
 
     # shell
     gnomeExtensions.pano

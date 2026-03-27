@@ -4,6 +4,14 @@ with pkgs;
 mkDevShell pkgs "python" [
   (python312.withPackages (
     ps: with ps; [
+      {
+        nixpkgs.config.allowUnfreePredicate =
+          pkg:
+          builtins.elem (lib.getName pkg) [
+            "cuda_cccl"
+            "cupy"
+          ];
+      }
       beautifulsoup4
       black
       matplotlib
@@ -17,6 +25,4 @@ mkDevShell pkgs "python" [
       virtualenv
     ]
   ))
-  ruff-lsp
 ]
-

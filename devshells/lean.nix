@@ -1,8 +1,8 @@
 { mkDevShell, pkgs }:
 
 with pkgs;
+   mkDevShell pkgs "lean" [
+      lean4
+      elan
+   ]
 
-mkDevShell pkgs "lean" [
-   lean4
-   elan
-]
