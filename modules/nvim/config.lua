@@ -92,7 +92,7 @@ vim.lsp.config("texlab", {})
 -- lean4
   ---@module 'lean'
   ---@type lean.Config
-  require('lean').setup {
+require('lean').setup {
     -- Enable suggested mappings?
     --
     -- false by default, true to enable
@@ -104,7 +104,7 @@ vim.lsp.config("texlab", {})
     --
     -- See :help vim.lsp.Config for details.
     vim.lsp.config('leanls', {
-      abbreviations = { builtin = true },
+      --abbreviations = { builtin = true },
       on_attach = on_attach,
       init_options = {
         -- See Lean.Lsp.InitializationOptions for details and further options.
@@ -160,7 +160,7 @@ vim.lsp.config("texlab", {})
 
       -- Set infoview windows' starting dimensions.
       -- Windows are opened horizontally or vertically depending on spacing.
-      width = 50,
+      width = 55,
       height = 20,
 
       -- Set the infoviews' orientation to be dynamic based on screen layout

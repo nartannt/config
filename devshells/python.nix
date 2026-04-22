@@ -2,7 +2,7 @@
 
 with pkgs;
 mkDevShell pkgs "python" [
-  (python312.withPackages (
+  (python314.withPackages (
     ps: with ps; [
       {
         nixpkgs.config.allowUnfreePredicate =
@@ -16,6 +16,7 @@ mkDevShell pkgs "python" [
       black
       matplotlib
       numpy
+      jax
       python-dotenv
       python-lsp-ruff
       requests

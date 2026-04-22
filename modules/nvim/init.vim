@@ -135,4 +135,4 @@ autocmd FileType coq noremap <C-t> :CoqToLine<CR>hh  " undo last line
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
-autocmd BufRead,BufNewFile *.markdown,*.md set conceallevel=2 foldlevelstart=6
+autocmd BufRead,BufNewFile *.markdown,*.md set conceallevel=0 foldlevelstart=6
