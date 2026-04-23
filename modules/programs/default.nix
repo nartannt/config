@@ -46,7 +46,6 @@ in {
     unzip
     zip
     wget
-    tree
     findutils
     patchelf
     lshw
@@ -118,6 +117,8 @@ in {
 
     planify
 
+    evince
+
     geeqie
 
     magic-wormhole
@@ -135,7 +136,7 @@ in {
 
     trilium-desktop
     # proton
-    protonvpn-gui
+    proton-vpn
     #gromacs
     wl-clipboard
 

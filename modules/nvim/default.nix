@@ -37,6 +37,10 @@ in
       tinymist
     ];
 
+    ## to suppress warnings
+    withRuby = false;
+    withPython3 = true;
+
     ##stolen from https://github.com/junegunn/vim-plug/issues/1010
     #start = [
     #      # vim-plug # <--- Does not work as-is, so the below override is required.
