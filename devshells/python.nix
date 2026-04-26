@@ -14,11 +14,12 @@ mkDevShell pkgs "python" [
       }
       beautifulsoup4
       black
+      jax
       matplotlib
       numpy
       jax
       python-dotenv
-      python-lsp-ruff
+      #python-lsp-ruff
       requests
       scikit-learn
       setuptools
@@ -26,4 +27,5 @@ mkDevShell pkgs "python" [
       virtualenv
     ]
   ))
+  #ruff-lsp
 ]
