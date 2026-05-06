@@ -104,7 +104,7 @@ require('lean').setup {
     --
     -- See :help vim.lsp.Config for details.
     vim.lsp.config('leanls', {
-      --abbreviations = { builtin = true },
+      abbreviations = { builtin = true },
       on_attach = on_attach,
       init_options = {
         -- See Lean.Lsp.InitializationOptions for details and further options.
