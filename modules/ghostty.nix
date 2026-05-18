@@ -7,13 +7,20 @@
     enableBashIntegration = true;
 
      settings = {
+
       cursor-style = "bar";
       gtk-titlebar = false;
       theme = "light:Nord Light,dark:Nord";
+
       window-inherit-working-directory = true;
       window-theme = "ghostty";
+
+      # TODO set up some nice cool thing where this number is calculated from the paperwm default smallest (or medium) cycle-width-steps width setting
+      wnidow-width = 72;
+
       mouse-hide-while-typing = true;
       font-feature = ["-calt"];
+
       #calt = 0;
 
       #keybind = ctrl+plus=increase_font_size:1;

@@ -94,7 +94,8 @@
       selection-border-size = 2;
       vertical-margin = 5;
       vertical-margin-bottom = 5;
-      window-gap = 7;
+
+      window-gap = 1;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {

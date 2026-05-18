@@ -113,6 +113,7 @@ in {
     #tt-rss
 
     pdftk
+    ghostscript
     xournalpp
 
     planify
