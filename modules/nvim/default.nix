@@ -89,7 +89,6 @@ in
     #Plug 'jalvesaq/zotcite'
     # dependencies of zotcite
     #Plug 'nvim-telescope/telescope.nvim'
-    #Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'main' }
     #Plug 'jalvesaq/cmp-zotcite'
 
     inherit extraConfig initLua;

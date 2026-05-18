@@ -90,12 +90,12 @@
       show-workspace-indicator = false;
       show-open-position-icon = false;
       gesture-enabled = false;
-      horizontal-margin = 5;
+      horizontal-margin = 3;
       selection-border-size = 2;
-      vertical-margin = 5;
-      vertical-margin-bottom = 5;
+      vertical-margin = 3;
+      vertical-margin-bottom = 3;
 
-      window-gap = 1;
+      window-gap = 3;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
