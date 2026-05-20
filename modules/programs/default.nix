@@ -41,6 +41,7 @@ in {
     htop
     inetutils
     killall
+    fd
     ncdu
     tree
     unzip
@@ -74,7 +75,6 @@ in {
     ffmpeg
     picard
     # typesetting
-    #ghostscript
     texlive.combined.scheme-full
     texlivePackages.tikz-cd
     texliveFull
@@ -104,6 +104,7 @@ in {
     gsound
     #gensio
     zoom-us
+    broot
 
     rPackages.proton
     protonmail-bridge
@@ -119,6 +120,8 @@ in {
     planify
 
     evince
+
+    fzf
 
     geeqie
 
