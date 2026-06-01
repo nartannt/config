@@ -12,6 +12,8 @@
       gtk-titlebar = false;
       theme = "light:Nord Light,dark:Nord";
 
+      window-decoration = "none";
+
       window-inherit-working-directory = false;
       window-theme = "ghostty";
       # TODO set up some nice cool thing where this number is calculated from the paperwm default smallest (or medium) cycle-width-steps width setting

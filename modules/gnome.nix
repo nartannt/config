@@ -7,7 +7,7 @@
     enable = true;
     defaultApplications = {
       "application/pdf" =
-        [ "sioyek.desktop" "gnome.evinnce.desktop" "firefox.desktop" ];
+        [ "gnome.evinnce.desktop" "sioyek.desktop" "firefox.desktop" ];
 
       # browser
       "text/html" = "firefox.desktop";
@@ -91,11 +91,11 @@
       show-open-position-icon = false;
       gesture-enabled = false;
       horizontal-margin = 3;
-      selection-border-size = 2;
+      selection-border-size = 0;
       vertical-margin = 3;
       vertical-margin-bottom = 3;
 
-      window-gap = 3;
+      window-gap = 0;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
