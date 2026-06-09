@@ -8,22 +8,35 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, ... }:
+  outputs =
+    inputs@{ nixpkgs, ... }:
     let
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      lib = nixpkgs.lib.extend (final: prev: {
-        myLib = import ./lib {
-          lib = final;
-          inherit inputs;
-        };
-      });
+      fonts.packages = with pkgs; [
+        fira
+        spleen
+        libertine-g
+      ];
+      lib = nixpkgs.lib.extend (
+        final: prev: {
+          myLib = import ./lib {
+            lib = final;
+            inherit inputs;
+          };
+        }
+      );
 
-    in {
-      nixosConfigurations =
-        lib.genAttrs [ "tulkas" "palacendo" "abaddon" "aximand" ] lib.myLib.hostNixosConfig;
-      devShells."x86_64-linux" = lib.myLib.mapModulesNoDefault ./devshells
-        (p: pkgs.callPackage p { inherit (lib.myLib) mkDevShell; });
+    in
+    {
+      nixosConfigurations = lib.genAttrs [
+        "tulkas"
+        "palacendo"
+        "abaddon"
+        "aximand"
+      ] lib.myLib.hostNixosConfig;
+      devShells."x86_64-linux" = lib.myLib.mapModulesNoDefault ./devshells (
+        p: pkgs.callPackage p { inherit (lib.myLib) mkDevShell; }
+      );
 
     };
 }
-

@@ -2,6 +2,8 @@
 
 {
 
+  services.desktopManager.gnome.enable = true;
+
   home-manager.users.nartan.xdg.mimeApps = {
 
     enable = true;

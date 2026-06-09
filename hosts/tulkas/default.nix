@@ -116,12 +116,6 @@
     nvidiaBusId = "PCI:2:0:0";
   };
 
-  fonts.packages = with pkgs; [
-    fira
-    spleen
-    libertine-g
-  ];
-
     # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
