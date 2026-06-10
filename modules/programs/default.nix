@@ -150,6 +150,9 @@ in {
 
     syncthing
 
+    direnv
+    nix-direnv
+
     openvpn
     gitlab-runner
     # security
