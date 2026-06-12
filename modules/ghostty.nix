@@ -17,7 +17,7 @@
       window-inherit-working-directory = false;
       window-theme = "ghostty";
       # TODO set up some nice cool thing where this number is calculated from the paperwm default smallest (or medium) cycle-width-steps width setting
-      window-width = "72";
+      window-width = "68";
       window-height = "52";
 
       mouse-hide-while-typing = true;
