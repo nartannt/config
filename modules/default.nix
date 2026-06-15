@@ -9,8 +9,8 @@
     ./zotero.nix
     ./sioyek.nix
     ./gnome.nix
-    ./firefox.nix
     ./fonts.nix
+    ./firefox/default.nix
     ./programs/default.nix
     ./music/default.nix
     ./services/default.nix
