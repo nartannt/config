@@ -7,11 +7,27 @@
       package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
         extraPolicies = {
           DisableTelemetry = true;
+          EnableTrackingProtection = {
+            Value = true;
+            Locked = true;
+            Cryptomining = true;
+            Fingerprinting = true;
+          };
+          DisablePocket = true;
+          DisableFirefoxAccounts = true;
+          DisableAccounts = true;
+          DisableFirefoxScreenshots = true;
+          OverrideFirstRunPage = "";
+          OverridePostUpdatePage = "";
+          DontCheckDefaultBrowser = true;
           DisplayBookmarksToolbar = "newtab";
+          DisplayMenuBar = "default-on"; # alternatives: "always", "never" or "default-on"
+          #SearchBar = "unified"; # alternative: "separate"
           # add policies here...
 
-          /* ---- EXTENSIONS ---- */
+          # ---- EXTENSIONS ----
           ExtensionSettings = {
+            #"*".installation_mode = "blocked"; # blocks all addons except the ones specified below
             # uBlock Origin:
             "uBlock0@raymondhill.net" = {
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
@@ -32,7 +48,7 @@
             };
 
             # Simple Translate
-               "simple-translate@sienori" = {
+            "simple-translate@sienori" = {
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple_translate/latest.xpi/";
               installation_mode = "force_installed";
             };
@@ -44,16 +60,16 @@
             };
             # add extensions here...
           };
-  
-          /* ---- PREFERENCES ---- */
+
+          # ---- PREFERENCES ----
           # Set preferences shared by all profiles.
-          Preferences = { 
+          Preferences = {
             # add global preferences here...
           };
         };
       };
 
-      /* ---- PROFILES ---- */
+      # ---- PROFILES ----
       # Switch profiles via about:profiles page.
       # For options that are available in Home-Manager see
       # https://nix-community.github.io/home-manager/options.html#opt-programs.firefox.profiles
