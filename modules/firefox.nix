@@ -4,6 +4,10 @@
   programs = {
     firefox = {
       enable = true;
+     #profiles.default = {
+     #  "browser.bookmarks.file" = ./bookmarks.html;
+     #  "browser.places.importBookmarksHTML" = true;
+     #};
       package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
         extraPolicies = {
           DisableTelemetry = true;
