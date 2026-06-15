@@ -12,11 +12,6 @@
     inputs@{ nixpkgs, ... }:
     let
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      fonts.packages = with pkgs; [
-        fira
-        spleen
-        libertine-g
-      ];
       lib = nixpkgs.lib.extend (
         final: prev: {
           myLib = import ./lib {

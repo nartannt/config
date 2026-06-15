@@ -10,6 +10,7 @@
     ./sioyek.nix
     ./gnome.nix
     ./firefox.nix
+    ./fonts.nix
     ./programs/default.nix
     ./music/default.nix
     ./services/default.nix
