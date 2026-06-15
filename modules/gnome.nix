@@ -95,7 +95,7 @@
       show-workspace-indicator = false;
       show-open-position-icon = false;
       gesture-enabled = false;
-      horizontal-margin = 3;
+      horizontal-margin = 0;
       selection-border-size = 0;
       vertical-margin = 3;
       vertical-margin-bottom = 3;
