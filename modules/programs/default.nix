@@ -44,6 +44,9 @@ in {
     fd
     ncdu
     tree
+
+    virtiofsd
+
     unzip
     zip
     wget
