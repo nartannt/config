@@ -104,7 +104,6 @@ require('lean').setup {
     --
     -- See :help vim.lsp.Config for details.
     vim.lsp.config('leanls', {
-      abbreviations = { builtin = true },
       on_attach = on_attach,
       init_options = {
         -- See Lean.Lsp.InitializationOptions for details and further options.
@@ -132,6 +131,7 @@ require('lean').setup {
 
     -- Abbreviation support
     abbreviations = {
+       builtin = true,
       -- Enable expanding of unicode abbreviations?
       enable = true,
       -- additional abbreviations:
@@ -145,7 +145,6 @@ require('lean').setup {
       },
       -- Change if you don't like the backslash
       -- (comma is a popular choice on French keyboards)
-      leader = '<space>',
     },
 
     -- Infoview support
