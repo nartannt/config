@@ -210,6 +210,15 @@ require('lean').setup {
     },
   }
 -- lsp key mappings
+ 
+vim.diagnostic.config({
+  virtual_text = false,
+  jump = {
+    on_jump = function(_, bufnr)
+      vim.diagnostic.open_float({ bufnr = bufnr })
+    end,
+  },
+})
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -243,7 +252,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.lsp.buf.format { async = true }
     end, opts)
     -- these are my own mappings
-    vim.keymap.set('n', '<space>j', vim.diagnostic.jump({count=1,  float=true}), opts)
-    vim.keymap.set('n', '<space>k', vim.diagnostic.jump({count=-1, float=true}), opts)
+    vim.keymap.set('n', '<space>j', function() 
+       vim.diagnostic.jump({count=1 })
+     end, opts)
+    vim.keymap.set('n', '<space>k', function() 
+       vim.diagnostic.jump({count=-1})
+    end, opts)
   end,
 })

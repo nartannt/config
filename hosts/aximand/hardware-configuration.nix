@@ -13,6 +13,9 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  hardware.ipu6.enable = true; 
+  hardware.ipu6.platform = "ipu6"; 
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/c9c32392-e5ef-458b-925c-c46bfd3c343f";
       fsType = "ext4";
