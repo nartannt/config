@@ -8,5 +8,6 @@ in {
         fira-sans
         spleen
         linux-libertine-g
+        newcomputermodern
       ];
 }
