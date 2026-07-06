@@ -243,7 +243,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.lsp.buf.format { async = true }
     end, opts)
     -- these are my own mappings
-    vim.keymap.set('n', '<space>j', vim.diagnostic.goto_next, opts)
-    vim.keymap.set('n', '<space>k', vim.diagnostic.goto_prev, opts)
+    vim.keymap.set('n', '<space>j', vim.diagnostic.jump({count=1,  float=true}), opts)
+    vim.keymap.set('n', '<space>k', vim.diagnostic.jump({count=-1, float=true}), opts)
   end,
 })
