@@ -63,6 +63,11 @@
 
   home-manager.users.nartan.dconf.settings = {
 
+
+     "de/haeckerfelix/Fragments" = {
+        download-dir = "/home/nartan/Downloas/torrents";
+     };
+
     "org/gnome/desktop/interface" = {
        show-battery-percentage = true;
     };
