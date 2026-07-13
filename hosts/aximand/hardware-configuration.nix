@@ -12,9 +12,20 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  programs.obs-studio.enableVirtualCamera = true;
+  #boot.kernelPatches = [
+  #   {
+  #      # patch taken from https://git.gay/lilymeow/nixos-config
+  #      name = "webcam-fix";
+  #      patch = ./webcam-fix.patch;
+  #   }
+  #];
 
+  hardware.enableAllHardware = true;
+  hardware.enableAllFirmware = true;
   hardware.ipu6.enable = true; 
   hardware.ipu6.platform = "ipu6"; 
+  #hardware.facter.detected.camera.ipu6.enable = true;
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/c9c32392-e5ef-458b-925c-c46bfd3c343f";

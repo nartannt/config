@@ -78,9 +78,9 @@ in {
     ffmpeg
     picard
     # typesetting
-    texlive.combined.scheme-full
+    #texlive.combined.scheme-full
     texlivePackages.tikz-cd
-    texliveFull
+    texliveSmall
     texlab
     typst
     pandoc
