@@ -85,12 +85,15 @@
         disable-user-extensions = false;
         disabled-extensions = "disabled";
         enabled-extensions = with pkgs.gnomeExtensions; [
-          pano.extensionUuid
+          #pano.extensionUuid
           lock-keys.extensionUuid
           paperwm.extensionUuid
         ];
     };
 
+    "org/gnome/shell/extensions/hide_notification_bar" = {
+       enable = true;
+    };
     "org/gnome/shell/extensions/paperwm" = {
       animation-time = 0.1;
       default-focus-mode = 0;

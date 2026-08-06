@@ -78,7 +78,7 @@ in {
     ffmpeg
     picard
     # typesetting
-    #texlive.combined.scheme-full
+    texlive.combined.scheme-full
     texlivePackages.tikz-cd
     texliveSmall
     texlab
@@ -101,9 +101,10 @@ in {
     #python310Packages.pynvim
 
     # shell
-    gnomeExtensions.pano
+    #gnomeExtensions.pano
     gnomeExtensions.paperwm
     gnomeExtensions.lock-keys
+    #gnomeExtensions.hide_notification_bar
     gsound
     #gensio
     zoom-us
