@@ -93,8 +93,8 @@ autocmd ExitPre ocaml,nix :Format
 let @c = 'I(*A*)'
 " uncomments a single line for ocaml file
 let @v = '_"_x"_x$"_x"_x'
-autocmd FileType ocaml nnoremap <C-x> @c
-autocmd FileType ocaml nnoremap <C-s> @v
+"autocmd FileType ocaml nnoremap <C-x> @c
+"autocmd FileType ocaml nnoremap <C-s> @v
 
 
 "command StartSplit vsplit set nu! split

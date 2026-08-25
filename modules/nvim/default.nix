@@ -35,6 +35,8 @@ in
     extraPackages = with pkgs; [
       nixfmt
       tinymist
+      rust-analyzer
+      #rust-tools-nvim
     ];
 
     ## to suppress warnings
@@ -76,12 +78,12 @@ in
       vim-markdown
       onenord-nvim
       nvim-treesitter
+      #rustaceanvim
       (fromGitHub {
         repo = "Myriad-Dreamin/tinymist";
         rev = "a42700c04bb0e780fb7c44eabce84834b767948f";
         sha256 = "sha256-U+TwHCncC4Umjl4Ko7jC7zT0rJhcmWLpW+oC6eKEHz8=";
       })
-      #rust-tools-nvim
       #texlab
       #merlin
     ];

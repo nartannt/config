@@ -96,6 +96,8 @@
     };
     "org/gnome/shell/extensions/paperwm" = {
       animation-time = 0.1;
+      default-background = "/home/nartan/Pictures/background.png";
+      workspace-colors = ["#000000"];
       default-focus-mode = 0;
       disable-topbar-styling = true;
       show-focus-mode-icon = false;

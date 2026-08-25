@@ -17,7 +17,6 @@ mkDevShell pkgs "python" [
       jax
       matplotlib
       numpy
-      jax
       python-dotenv
       #python-lsp-ruff
       requests

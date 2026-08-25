@@ -69,19 +69,7 @@ end, { range = true })
 local util = require 'lspconfig.util'
 
 
--- rust
-vim.lsp.config("rust_analyzer", {
-	-- rust tools
-	tools = {
-	   inlay_hints = {
-	       parameter_hints_prefix = "// ",
-	       -- hint colour
-	       highlight = "Hints",
-	   },
-	},
-})
---require("rust-tools").setup(opts)
-
+vim.lsp.inlay_hint.enable(true)
 
 -- ocaml
 vim.lsp.config("ocamllsp", {})

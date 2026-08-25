@@ -133,6 +133,9 @@ in {
     wormhole-rs
     croc
     #minecraft
+    eduvpn-client
+    networkmanager-openvpn
+    openvpn
     zola
     zotero
     tagger
