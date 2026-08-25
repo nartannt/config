@@ -36,7 +36,6 @@ in
       nixfmt
       tinymist
       rust-analyzer
-      #rust-tools-nvim
     ];
 
     ## to suppress warnings
@@ -78,7 +77,7 @@ in
       vim-markdown
       onenord-nvim
       nvim-treesitter
-      #rustaceanvim
+      rustaceanvim
       (fromGitHub {
         repo = "Myriad-Dreamin/tinymist";
         rev = "a42700c04bb0e780fb7c44eabce84834b767948f";
