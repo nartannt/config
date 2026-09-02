@@ -9,10 +9,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-  programs.bash.shellAliases = {
-    vim = "nvim";
-    open = "xdg-open";
-  };
+  #programs.bash.shellAliases = {
+  #  vim = "nvim";
+  #  open = "xdg-open";
+  #};
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
