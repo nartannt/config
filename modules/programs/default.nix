@@ -46,6 +46,8 @@ in {
     ncdu
     tree
 
+    podman
+
     virtiofsd
 
     unzip

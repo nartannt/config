@@ -17,6 +17,10 @@
     ./nvim/default.nix
   ];
 
+  virtualisation.podman = {
+     enable = true;
+  };
+  virtualisation.containers.registries.search = [ "docker.io" ];
   nix = {
     registry.conf.flake = inputs.self;
     settings = {
