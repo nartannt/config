@@ -49,6 +49,7 @@ augroup END
 "let g:Tex_IgnoreLevel = 8
 let g:tex_conceal = ""
 let g:vimtex_syntax_enabled = 0
+let g:vimtex_compiler_latexmk_clean_ext = ["synctex.gz"]
 "let g:vimtex_syntax_nospell_comments = 0
 
 
