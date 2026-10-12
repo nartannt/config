@@ -9,7 +9,7 @@
     enable = true;
     defaultApplications = {
       "application/pdf" =
-        [ "gnome.evinnce.desktop" "sioyek.desktop" "firefox.desktop" ];
+        [ "gnome.evince.desktop" "sioyek.desktop" "firefox.desktop" ];
 
       # browser
       "text/html" = "firefox.desktop";
