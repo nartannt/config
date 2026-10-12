@@ -18,6 +18,7 @@
 
   imports = [
     ./syncthing.nix
+    ./minecraft.nix
   ];
 
 }

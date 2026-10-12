@@ -54,7 +54,8 @@ in
       zotero-open-pdf
     ];
 
-    enable = true;
+    # wait until https://github.com/NixOS/nixpkgs/pull/569006 is done
+    enable = false;
     settings = {
       "extensions.zotero.fileHandler.pdf" = pkgs.sioyek;
     };

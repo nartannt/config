@@ -115,7 +115,7 @@ in {
 
     rPackages.proton
     protonmail-bridge
-    protonmail-bridge-gui
+    #protonmail-bridge-gui
     #hydroxide
 
     #tt-rss
@@ -136,11 +136,11 @@ in {
     wormhole-rs
     croc
     #minecraft
+    libglvnd
     eduvpn-client
     networkmanager-openvpn
     openvpn
     zola
-    zotero
     tagger
 
     inkscape

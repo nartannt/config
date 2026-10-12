@@ -1,4 +1,9 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
 
   services = {
@@ -31,7 +36,10 @@
           "music" = {
             # Name of folder in Syncthing, also the folder ID
             path = "~/Music"; # Which folder to add to Syncthing
-            devices = [ "tulkas" "palacendo" ]; # Which devices to share the folder with
+            devices = [
+              "tulkas"
+              "palacendo"
+            ]; # Which devices to share the folder with
           };
           "phone_photos" = {
             path = "~/Pictures/photos/phone_photos";
