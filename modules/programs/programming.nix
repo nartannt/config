@@ -4,7 +4,7 @@ let
   c_packages = with pkgs; [ gcc cmake clang-tools ];
   cpp_packages = with pkgs; [ cryptopp ];
   ocaml_packages = with pkgs; [ ocaml ocamlPackages.lsp ocamlPackages.merlin ];
-  coq_packages = with pkgs; [ coq coqPackages.autosubst coqPackages.equations ];
+  rocq_packages = with pkgs; [ rocq rocqPackages.autosubst rocqPackages.equations ];
   rust_packages = with pkgs; [ rustc rustup rust-analyzer ];
   scala_packages = with pkgs; [ metals sbt scala scalafmt ];
 
@@ -17,7 +17,7 @@ let
 
 in {
   environment.systemPackages = with pkgs;
-    ocaml_packages ++ c_packages ++ coq_packages ++ rust_packages
+    ocaml_packages ++ c_packages ++ rocq_packages ++ rust_packages
     ++ cpp_packages
     ++ scala_packages ++ git_packages ++ [ python-with-my-packages binutils gnumake ];
 }
