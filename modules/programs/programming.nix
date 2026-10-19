@@ -4,7 +4,7 @@ let
   c_packages = with pkgs; [ gcc cmake clang-tools ];
   cpp_packages = with pkgs; [ cryptopp ];
   ocaml_packages = with pkgs; [ ocaml ocamlPackages.lsp ocamlPackages.merlin ];
-  rocq_packages = with pkgs; [ rocq rocqPackages.autosubst rocqPackages.equations ];
+  rocq_packages = with pkgs; [ rocq-core rocqPackages.autosubst rocqPackages.equations ];
   rust_packages = with pkgs; [ rustc rustup rust-analyzer ];
   scala_packages = with pkgs; [ metals sbt scala scalafmt ];
 
