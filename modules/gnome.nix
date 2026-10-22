@@ -9,7 +9,7 @@
     enable = true;
     defaultApplications = {
       "application/pdf" =
-        [ "evince.desktop" "gnome.evince.desktop" "firefox.desktop" ];
+        [ "org.gnome.Evince.desktop" "" "firefox.desktop" ];
 
       # browser
       "text/html" = "firefox.desktop";
