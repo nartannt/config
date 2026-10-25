@@ -136,6 +136,7 @@ in {
     wormhole-rs
     croc
     #minecraft
+    mumble
     libglvnd
     eduvpn-client
     networkmanager-openvpn
