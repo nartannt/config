@@ -76,7 +76,7 @@ in {
     fragments
     # music
     nicotine-plus
-    polaris
+    #polaris
     vlc
     ffmpeg
     picard
@@ -106,7 +106,7 @@ in {
     # shell
     #gnomeExtensions.pano
     gnomeExtensions.paperwm
-    gnomeExtensions.lock-keys
+    #gnomeExtensions.lock-keys
     #gnomeExtensions.hide_notification_bar
     gsound
     #gensio

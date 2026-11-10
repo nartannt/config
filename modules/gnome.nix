@@ -86,7 +86,7 @@
         disabled-extensions = "disabled";
         enabled-extensions = with pkgs.gnomeExtensions; [
           #pano.extensionUuid
-          lock-keys.extensionUuid
+          #lock-keys.extensionUuid
           paperwm.extensionUuid
         ];
     };
