@@ -21,7 +21,7 @@ in {
       open = "xdg-open";
       cp = "cp -i";
       mv = "mv -i";
-      grr = "grep -R --color -e -I";
+      grr = "grep -R --color --binary-files=without-match -e";
     };
   };
 
